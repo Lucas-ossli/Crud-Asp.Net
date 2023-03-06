@@ -49,5 +49,11 @@ namespace aspnet.Models{
 
            
         }
+
+        public static void Excluir(int? id){
+
+            listagem.Remove(listagem.Find(i => i.Id == id));
+
+        }
     }
 }
