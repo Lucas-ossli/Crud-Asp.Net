@@ -25,10 +25,9 @@ namespace aspnet.Models{
         static Usuario()
         {
             Usuario.listagem.Add(new Usuario {Id=1, Nome="Fulano", Email="Fulano@email.com"});
-            Usuario.listagem.Add(new Usuario {Id=2, Nome="Siclano", Email="Fulano@email.com"});
-            Usuario.listagem.Add(new Usuario {Id=3, Nome="Beltrano", Email="Fulano@email.com"});
-            Usuario.listagem.Add(new Usuario {Id=4, Nome="teste", Email="Fulano@email.com"});
-            Usuario.listagem.Add(new Usuario {Id=5, Nome="laslkd", Email="Fulano@email.com"});
+            Usuario.listagem.Add(new Usuario {Id=2, Nome="Siclano", Email="Siclano@email.com"});
+            Usuario.listagem.Add(new Usuario {Id=3, Nome="Beltrano", Email="Beltrano@email.com"});
+            Usuario.listagem.Add(new Usuario {Id=4, Nome="teste", Email="teste@email.com"});
             
         }
 
