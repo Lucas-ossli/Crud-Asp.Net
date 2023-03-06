@@ -8,4 +8,5 @@ CRUD de usuários feito em Asp.Net usando o padrão MVC
 
 - Faça o clone do repositório
 - Abra o prompt comando no diretório do repositório e execute: dotnet run
+- Após a aplicação compilar, acesse a porta: **http://localhost:5000/** no seu navegador.
 
