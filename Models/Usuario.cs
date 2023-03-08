@@ -1,15 +1,18 @@
 
 
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace aspnet.Models{
     public class Usuario{
-
+        
         public int Id { get; set; }
 
+        [Required(ErrorMessage ="O campo Nome deve ser preenchido")]
         public string Nome{get;set;}
-        
+
+        [Required(ErrorMessage ="O campo Email deve ser preenchido")]
         public string Email { get; set; }
 
         private static List<Usuario> listagem = new List<Usuario>();

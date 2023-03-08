@@ -8,8 +8,10 @@
 
 <h1 class="text-primary">Cadastrar Usuário</h1>
 <hr>
+<div asp-validation-summary="All"></div>
 <form method="POST" class="w-25">
-    <input type="hidden" asp-for="Id">
+    @* <input type="hidden" asp-for="Id"> *@
+    
     <div class="form-group">
         <label asp-for="Nome" >Nome:</label><br>
         <input asp-for="Nome"  class="form-control">   
@@ -22,10 +24,7 @@
     <br>
     <div>
         <a href="/Home/Usuarios" class="btn btn-light">Cancelar</a>
-    
         <button class="btn btn-primary" type="submit">Salvar</button>
-        
-    
     </div>
 
     
