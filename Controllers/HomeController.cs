@@ -29,8 +29,15 @@ namespace aspnet.Controllers{
         [HttpPost]
         public IActionResult Cadastrar(Usuario usuario)
         {
-            Usuario.Salvar(usuario);
-            return RedirectToAction("Usuarios");
+            if(ModelState.IsValid){
+                Usuario.Salvar(usuario);
+                return RedirectToAction("Usuarios");
+            }
+            else
+            {
+                return View(usuario);
+            }
+            
         }
 
          public IActionResult Usuarios()
