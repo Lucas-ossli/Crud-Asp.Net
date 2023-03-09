@@ -64,7 +64,7 @@ namespace aspnet.Controllers{
         [HttpPost]
         public IActionResult Excluir(Usuario user)
         {
-            Usuario.Excluir(user.Id);
+            TempData["Excluiu"] = Usuario.Excluir(user.Id);
             return RedirectToAction("Usuarios");
         }
 

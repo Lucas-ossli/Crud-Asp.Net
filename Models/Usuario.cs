@@ -52,10 +52,15 @@ namespace aspnet.Models{
            
         }
 
-        public static void Excluir(int? id){
+        public static bool Excluir(int? idUsuario){
+            
+            var usuarioExistente = Usuario.listagem.Find(i => i.Id == idUsuario);
+            if(usuarioExistente != null){
+                return listagem.Remove(listagem.Find(i => i.Id == idUsuario));
+            }
 
-            listagem.Remove(listagem.Find(i => i.Id == id));
-
+            return false;
+            
         }
     }
 }

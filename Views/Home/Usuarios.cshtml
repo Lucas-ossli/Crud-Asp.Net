@@ -8,7 +8,18 @@
 <h1 class="text-primary">Usuários</h1>
 <hr>
 <a href="/Home/Cadastrar" class="btn btn-primary">Novo Usuário</a>
-
+@if(TempData.ContainsKey("Excluiu"))
+{
+    var excluiu = (bool)TempData["Excluiu"];
+    if(excluiu)
+    {
+        <partial name="_MensagemInfo" model="@("Usuario excluido com sucesso.")"></partial>
+    }
+    else
+    {
+        <partial name="_MensagemError" model="@("Não Foi Possivel Excluir o Usuário.")"></partial>
+    }
+}
 
 <table class="table">
     <thead>
@@ -33,5 +44,6 @@
     </tbody>
 </table>
 
-
-       
+@section LogoPagina{
+    <img src="/img/usuarios.png" height="24" class="d-inline-block align-text-bottom">                
+}
